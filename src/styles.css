@@ -1654,3 +1654,15 @@ h2 {
     font-size: 15vw;
   }
 }
+
+.form-status {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.conversation-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
