@@ -1666,3 +1666,13 @@ h2 {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.conversation-brand {
+  margin-bottom: 50px;
+}
+
+.conversation-brand img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
