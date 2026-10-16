@@ -12,7 +12,12 @@ import {
   Users,
   HeartPulse,
 } from "lucide-react";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Conversation from "./Conversation";
 import "./styles.css";
+
+
 const programs = [
   {
     n: "01",
@@ -407,12 +412,9 @@ function App() {
               Ready to feel <em>limitless?</em>
             </h2>
           </div>
-          <a
-            className="button"
-            href="mailto:info@limitlessfit.in?subject=Membership%20enquiry"
-          >
-            Start a conversation <ArrowRight size={17} />
-          </a>
+          <a className="button" href="/conversation">
+  Start a conversation <ArrowRight size={17} />
+</a>
         </section>
 
         <section className="location-section" id="location">
@@ -493,4 +495,11 @@ function App() {
     </div>
   );
 }
-createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/conversation" element={<Conversation />} />
+    </Routes>
+  </BrowserRouter>
+);

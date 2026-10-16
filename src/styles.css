@@ -1546,3 +1546,111 @@ h2 {
   }
 }
 
+.conversation-page {
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  padding: 40px 8%;
+  box-sizing: border-box;
+}
+
+.conversation-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 80px;
+}
+
+.conversation-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.conversation-inner h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  margin: 25px 0 30px;
+}
+
+.conversation-inner h1 em {
+  font-style: normal;
+}
+
+.conversation-text {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+.conversation-form {
+  max-width: 800px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.conversation-form input,
+.conversation-form select,
+.conversation-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  padding: 18px 5px;
+  margin-bottom: 25px;
+  font: inherit;
+  outline: none;
+}
+
+.conversation-form input:focus,
+.conversation-form select:focus,
+.conversation-form textarea:focus {
+  border-bottom-color: #fff;
+}
+
+.conversation-form select {
+  appearance: none;
+}
+
+.conversation-form select option {
+  background: #111;
+  color: #fff;
+}
+
+.conversation-form textarea {
+  resize: vertical;
+}
+
+@media (max-width: 700px) {
+  .conversation-page {
+    padding: 25px 7%;
+  }
+
+  .conversation-inner {
+    padding-top: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .conversation-inner h1 {
+    font-size: 15vw;
+  }
+}
